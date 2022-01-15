@@ -69,6 +69,7 @@ function App() {
     <div className="App">
       <input
         type="text"
+        data-testid="input1"
         id="input1"
         value={input1}
         onChange={(e) => {
@@ -77,6 +78,7 @@ function App() {
       />
       <input
         type="text"
+        data-testid="input2"
         id="input2"
         value={input2}
         onChange={(e) => {
@@ -84,13 +86,17 @@ function App() {
         }}
       />
       <br />
-      <button onClick={calc} id="calculate_relationship">
+      <button
+        data-testid="calculate_relationship"
+        onClick={calc}
+        id="calculate_relationship"
+      >
         calculate_relationship
       </button>
-      <button onClick={clear} id="clear">
+      <button data-testid="clear" onClick={clear} id="clear">
         clear
       </button>
-      <h3>{input3}</h3>
+      <h3 data-testid="answer">{input3}</h3>
     </div>
   );
 }
